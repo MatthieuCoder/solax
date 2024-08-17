@@ -56,14 +56,6 @@ class X1HybridGen4(Inverter):
             "Grid power": (32, Units.W, to_signed),
             "Total feed-in energy": (pack_u16(34, 35), Total(Units.KWH), div100),
             "Total consumption": (pack_u16(36, 37), Total(Units.KWH), div100),
-            "Battery Discharge Energy total": (
-                pack_u16(74, 75),
-                Total(Units.KWH),
-                div10,
-            ),
-            "Battery Charge Energy total": (pack_u16(76, 77), Total(Units.KWH), div10),
-            "Battery Discharge Energy today": (78, DailyTotal(Units.KWH), div10),
-            "Battery Charge Energy today": (79, DailyTotal(Units.KWH), div10),
         }
 
     @classmethod
